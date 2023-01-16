@@ -4,10 +4,14 @@ import java.util.Scanner;
 
 public class SumOfTwo {
 
-    private static int[] findSum(int[] num1, int target) {
-        for (int i = 0; i < num1.length; i++) {
-            for (int j = i + 1; j < num1.length; j++) {
-                if (nums[i] + num1[j] == target) {
+    private static int[] findSum(int[] num1, int target) 
+    {
+        for (int i = 0; i < num1.length; i++) 
+        {
+            for (int j = i + 1; j < num1.length; j++) 
+            {
+                if (nums[i] + num1[j] == target) 
+                {
                     return new int[] { i, j };
                 }
             }
@@ -16,13 +20,15 @@ public class SumOfTwo {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         Scanner in = new Scanner(System.in);
 
         int n = in.nextInt();
         int[] num = new int[n];
 
-        for(int i = 0; i < n; i++) {
+        for(int i = 0; i < n; i++) 
+        {
             num[i] = in.nextInt();
         }
         int t = in.nextInt();
@@ -31,9 +37,12 @@ public class SumOfTwo {
 
         int[] indices = findSum(num, t);
 
-        if (indices.length == 2) {
+        if (indices.length == 2) 
+        {
             System.out.println(indices[0] + " " + indices[1]);
-        } else {
+        } 
+        else 
+        {
             System.out.println("No solution found!");
         }
     }
