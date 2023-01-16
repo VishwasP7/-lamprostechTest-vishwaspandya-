@@ -1,15 +1,13 @@
 
-import java.util.HashMap;
 import java.util.Scanner;
-import java.util.Map;
 
-public class TwoSum {
 
-    // Time complexity: O(n^2)
-    private static int[] findTwoSum_BruteForce(int[] nums, int target) {
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
-                if (nums[i] + nums[j] == target) {
+public class SumOfTwo {
+
+    private static int[] findSum(int[] num1, int target) {
+        for (int i = 0; i < num1.length; i++) {
+            for (int j = i + 1; j < num1.length; j++) {
+                if (nums[i] + num1[j] == target) {
                     return new int[] { i, j };
                 }
             }
@@ -19,19 +17,19 @@ public class TwoSum {
 
 
     public static void main(String[] args) {
-        Scanner keyboard = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
 
-        int n = keyboard.nextInt();
-        int[] nums = new int[n];
+        int n = in.nextInt();
+        int[] num = new int[n];
 
         for(int i = 0; i < n; i++) {
-            nums[i] = keyboard.nextInt();
+            num[i] = in.nextInt();
         }
-        int target = keyboard.nextInt();
+        int t = in.nextInt();
 
-        keyboard.close();
+        in.close();
 
-        int[] indices = findTwoSum_BruteForce(nums, target);
+        int[] indices = findSum(num, t);
 
         if (indices.length == 2) {
             System.out.println(indices[0] + " " + indices[1]);
