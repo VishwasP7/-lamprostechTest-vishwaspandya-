@@ -30,6 +30,6 @@ public static void main (String[] args)
 int arr1[] = {4,1,2,1,2};
 int n = arr1.length;
 
-System.out.println("Element occurring once is " + findSingleInt(arr1, n));
+System.out.println("Element is " + findSingleInt(arr1, n));
 }
 }
